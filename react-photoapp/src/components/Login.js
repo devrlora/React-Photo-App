@@ -4,13 +4,12 @@ import React, { Component } from 'react'
 import '../components/Login.css'
 
 
-
 class Login extends Component {
     constructor(props){
         super(props)
         this.state ={
             username: '',
-            password: ''
+            password: '',
         }
         this.handleChange=this.handleChange.bind(this);
         this.handleSubmit=this.handleSubmit.bind(this);
@@ -20,19 +19,20 @@ class Login extends Component {
     handleChange(evt){
         this.setState({[evt.target.name]: evt.target.value});
     }
-    // function will pass the input info 
+    // function will pass the input info.
     handleSubmit(evt){
         // prevent page refreshing 
         // hide password text
         evt.preventDefault();
-        alert(`You typed: ${this.state.username},${this.state.password} ` )
+        // const {username,password} =this.state;
         this.setState({username: '',password:''});
     }
     render() {
         return (
             <div>
                 <h1>Login Form</h1>
-                <form onSubmit= {this.handleSubmit}>
+                {/* <form onSubmit= {this.handleSubmit}> */}
+                <form>
                 <input className ='login-box'
                     type='text' 
                     name= 'username'
