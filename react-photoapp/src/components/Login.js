@@ -1,9 +1,11 @@
 // Login path will lead to one of three user accounts
 import React, { Component } from 'react'
-import Navbar from './Navbar';
+// import Navbar from './Navbar';
+import '../components/Login.css'
 
 
-export class Login extends Component {
+
+class Login extends Component {
     constructor(props){
         super(props)
         this.state ={
@@ -12,17 +14,22 @@ export class Login extends Component {
         }
         this.handleChange=this.handleChange.bind(this);
     }
-    handleChange(e){
+    // function will target any input the user types in real time 
+    // and render the page with each keystroke.
+
+    handleChange(evt){
 this.setState({userName: evt.target.value});
     }
     render() {
         return (
             <div>
+                <h1>Login Form</h1>
                 <form>
-                <input type='text' 
+                <input className ='login-box'
+                    type='text' 
                     value= {this.state.userName} 
                     onChange={this.handleChange}
-                />
+                /> 
                 </form>
                 
             </div>
