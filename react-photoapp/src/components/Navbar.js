@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Route, Link} from 'react-router-dom';
+import {Route, NavLink} from 'react-router-dom';
 import Home from './Home';
 import User from './User';
 import Bookmarks from './Bookmarks';
@@ -12,15 +12,15 @@ export class Navbar extends Component {
             <div className ='Menu'>
                 <nav className = 'Nav-bar'>
                     
-                    <Link to = '/home'>Home</Link>
-                    <Link to = '/user'>User</Link>
-                    <Link to = '/bookmarks'>Bookmarks</Link>
-                    <Link to = '/logout'>Logout</Link>
+                    <NavLink to = '/home'>Home</NavLink>
+                    <NavLink to = '/user'>User</NavLink>
+                    <NavLink to = '/bookmarks'>Bookmarks</NavLink>
+                    <NavLink to = '/logout'>Logout</NavLink>
                     {/* use 'exact' to prevent multiple pages loading */}
-                {/* <Route path ='/login' component={Login} /> */}
                 <Route exact path ='/home' component={Home} />
                 <Route exact path ='/user' component={User} />
                 <Route exact path ='/bookmarks' component={Bookmarks} />
+                {/* Logout should route back to login page */}
                 <Route exact path ='/' component={Logout} />
                 </nav>
             </div>
