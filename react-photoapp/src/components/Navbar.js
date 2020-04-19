@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Route, NavLink} from 'react-router-dom';
+import {Route, Switch, NavLink} from 'react-router-dom';
 import '../components/Navbar.css';
 import Home from './Home';
 import User from './User';
@@ -17,13 +17,15 @@ export class Navbar extends Component {
                     <NavLink activeClassName = 'active-tab' to = '/user'>User</NavLink>
                     <NavLink activeClassName = 'active-tab' to = '/bookmarks'>Bookmarks</NavLink>
                     <NavLink activeClassName = 'active-tab' to = '/logout'>Logout</NavLink>
+                    </nav>
+                <Switch>
                     {/* use 'exact' to prevent multiple pages loading */}
-                <Route exact path ='/home' component={Home} />
-                <Route exact path ='/user' component={User} />
-                <Route exact path ='/bookmarks' component={Bookmarks} />
-                {/* Logout should route back to login page */}
-                <Route exact path ='/' component={Logout} />
-                </nav>
+                    <Route exact path ='/home' component={Home} />
+                    <Route exact path ='/user' component={User} />
+                    <Route exact path ='/bookmarks' component={Bookmarks} />
+                    {/* Logout should route back to login page */}
+                    <Route exact path ='/' component={Logout} />
+                </Switch> 
             </div>
         )
     }
