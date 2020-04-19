@@ -1,14 +1,23 @@
-import React from 'react';
+import React, { Component } from 'react';
+import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import './App.css';
-// import Navbar from './components/Navbar';
+import Navbar from './components/Navbar';
 import Login from './components/Login';
-function App() {
-  return (
-    <div className="App">
-      {/* <Navbar /> */}
-      <Login />
-    </div>
-  );
+
+class App extends Component{
+  render(){
+    return (
+      <div className="App">
+        <BrowserRouter>
+        {/* Will route user to login page, then after authenticating,to the navbar */}
+        <Switch>
+            <Route exact path ={'/'} component={Login} />
+            <Route exact path ={'/navbar'} component={Navbar} />
+          </Switch>
+        </BrowserRouter>
+  </div>
+    );
+  }
 }
 
 export default App;
