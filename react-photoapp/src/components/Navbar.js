@@ -1,13 +1,19 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import {Route} from 'react-router-dom';
+import Home from './Home';
+// import User from './User';
+// import Bookmarks from './Bookmarks';
+// import Logout from './Logout';
+
 
 export class Navbar extends Component {
     render() {
         return (
             <div className ='Menu'>
-                <div>Home</div>
-                <div>User Profile</div>
-                <div>Bookmarks</div>
-                <div>Logout</div>
+                <Route path ='/home' component={Home} />
+                {/* <Route path ='/user' component={User} />
+                <Route path ='/bookmarks' component={Bookmarks} />
+                <Route path ='/' component={Logout} /> */}
             </div>
         )
     }
