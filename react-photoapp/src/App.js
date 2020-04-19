@@ -11,7 +11,7 @@ class App extends Component{
         <BrowserRouter>
         {/* Will route user to login page, then after authenticating,to the navbar */}
         <Switch>
-            <Route exact path ={'/'} component={Login} />
+            <Route exact path ={'/'} render={...props} loggedIn={this.state.loggedIn}/>
             <Route exact path ={'/navbar'} component={Navbar} />
           </Switch>
         </BrowserRouter>
