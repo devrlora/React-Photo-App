@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Route, NavLink} from 'react-router-dom';
+import '../components/Navbar.css';
 import Home from './Home';
 import User from './User';
 import Bookmarks from './Bookmarks';
@@ -11,11 +12,11 @@ export class Navbar extends Component {
         return (
             <div className ='Menu'>
                 <nav className = 'Nav-bar'>
-                    
-                    <NavLink to = '/home'>Home</NavLink>
-                    <NavLink to = '/user'>User</NavLink>
-                    <NavLink to = '/bookmarks'>Bookmarks</NavLink>
-                    <NavLink to = '/logout'>Logout</NavLink>
+                    {/*  add Navlink styling to showcase each active link */}
+                    <NavLink activeClassName = 'active-tab' to = '/home'>Home</NavLink>
+                    <NavLink activeClassName = 'active-tab' to = '/user'>User</NavLink>
+                    <NavLink activeClassName = 'active-tab' to = '/bookmarks'>Bookmarks</NavLink>
+                    <NavLink activeClassName = 'active-tab' to = '/logout'>Logout</NavLink>
                     {/* use 'exact' to prevent multiple pages loading */}
                 <Route exact path ='/home' component={Home} />
                 <Route exact path ='/user' component={User} />
