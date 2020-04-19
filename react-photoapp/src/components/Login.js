@@ -9,8 +9,8 @@ class Login extends Component {
     constructor(props){
         super(props)
         this.state ={
-            userName: '',
-            passWord: ''
+            username: '',
+            password: ''
         }
         this.handleChange=this.handleChange.bind(this);
         this.handleSubmit=this.handleSubmit.bind(this);
@@ -18,14 +18,15 @@ class Login extends Component {
     // function will target any input the user types in real time 
     // and render the page with each keystroke.
     handleChange(evt){
-this.setState({userName: evt.target.value});
+        this.setState({[evt.target.name]: evt.target.value});
     }
     // function will pass the input info 
     handleSubmit(evt){
         // prevent page refreshing 
+        // hide password text
         evt.preventDefault();
-        alert(`You typed: ${this.state.userName}` )
-        this.setState({userName: ''});
+        alert(`You typed: ${this.state.username},${this.state.password} ` )
+        this.setState({username: '',password:''});
     }
     render() {
         return (
@@ -34,13 +35,15 @@ this.setState({userName: evt.target.value});
                 <form onSubmit= {this.handleSubmit}>
                 <input className ='login-box'
                     type='text' 
-                    value= {this.state.userName}
+                    name= 'username'
+                    value= {this.state.username}
                     placeholder='Username' 
                     onChange={this.handleChange}
                 /> 
                 <input className ='login-box'
                     type='text' 
-                    value= {this.state.userName}
+                    name='password'
+                    value= {this.state.password}
                     placeholder='Password' 
                     onChange={this.handleChange}
                 /> 
