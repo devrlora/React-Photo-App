@@ -4,7 +4,8 @@
 ## A simple photo app the displays 3 user accounts with their respective photo library, as well as a home page with a random photo grid.
 
 # Technologies used:
-## Made with React. 
+## Made with React.
+# Install:
 ## React-Router.
 
 
