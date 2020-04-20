@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: 'ConcertOne-Regular';
+  src: local('ConcertOne-Regular'), 
+        url('./fonts/Concert_One/ConcertOne-Regular.ttf') format('truetype');
+}
