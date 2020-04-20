@@ -1,9 +1,13 @@
 a {
     text-decoration: none;
 }
+a,h1{
+    color:#655c56;
+    font-family: 'ConcertOne-Regular';
+  }
 
 .active-tab{
-    color: red;
+    color:#655c56;
     font-size: larger;
     border-bottom: 1px solid black;
 }
