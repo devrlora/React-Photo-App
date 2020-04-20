@@ -1,7 +1,15 @@
 .login-box{
     border-color: black;
+    display: block;
+    /* justify-content: flex-end; */
 }
 
 .login-btn{
     border-color: black;
+    
+}
+
+.login-container{
+  display:flex;
+  flex-direction: column;
 }
