@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import '../components/Photos.css';
+
 const RandPic = 'https://picsum.photos/200';
 
 export class Photos extends Component {
