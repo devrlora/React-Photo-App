@@ -3,7 +3,6 @@ import React, { Component } from 'react'
 // import Navbar from './Navbar';
 import '../components/Login.css'
 
-
 class Login extends Component {
     constructor(props){
         super(props)
