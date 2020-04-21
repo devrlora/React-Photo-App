@@ -5,6 +5,10 @@
     margin-bottom:16px;
   }
 
+  h1{
+    color:#655c56;
+    font-family: 'ConcertOne-Regular';
+  }
 /* CSS code inspired from https://gist.github.com/nrrrdcore/3309046 */
 
 .login-box{
