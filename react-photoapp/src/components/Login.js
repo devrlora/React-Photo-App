@@ -20,15 +20,15 @@ class Login extends Component {
     }
     // function will pass the input info.
     handleSubmit(evt){
-        // prevent page refreshing 
-        // hide password text
+        // prevent page refreshing.
+        // will refactor to hide password text.
         evt.preventDefault();
         // const {username,password} =this.state;
         this.setState({username: '',password:''});
     }
     render() {
         return (
-            <div>
+            <div className='login-container'>
                 <h1>Login Form</h1>
                 {/* <form onSubmit= {this.handleSubmit}> */}
                 <form>
