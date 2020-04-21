@@ -24,6 +24,8 @@ export class Home extends Component {
 					<Photos />
 					<Photos />
 					<Photos />
+					<Photos />
+					<Photos />
                 </div>
             </div>
         )
