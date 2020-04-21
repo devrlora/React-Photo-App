@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 // Commenting out Login component for this project.
 // Could not get login component to redirect after authentication
 // to navbar component, but it does have CSS styling.
+
 // Will come back at later time to attempt fix.
 
 function App() {
