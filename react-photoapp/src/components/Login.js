@@ -3,6 +3,8 @@ import React, { Component } from 'react'
 // import Navbar from './Navbar';
 import '../components/Login.css'
 
+// implement a way to verify login information.
+
 class Login extends Component {
     constructor(props){
         super(props)
