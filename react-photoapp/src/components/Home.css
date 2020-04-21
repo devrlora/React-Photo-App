@@ -1,6 +1,6 @@
 .Photo-image{
     display: flex;
-	justify-content: space-evenly;
+	justify-content: center;
     flex-wrap: wrap;
     flex-direction: row;
     padding: 5px;
